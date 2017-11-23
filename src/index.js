@@ -1,7 +1,25 @@
-const express = require('express')
-const app = express()
+function Index() {
 
-app.use(express.static('src'))
-app.get('/', (req, res) => res.send('Hello World'))
+    const context = new AudioContext();
 
-app.listen(3000, () => console.log('App started on port 3000!'))
+    var oscillator;
+
+    const startTone = function() {
+        oscillator = context.createOscillator();
+        oscillator.type = 'sine';
+        oscillator.frequency.value = 440;
+        oscillator.connect(context.destination);
+        oscillator.start();
+    };
+    const endTone = function() {
+        oscillator.stop();
+    };
+
+    const startButton = document.getElementById("startButton");
+    startButton.onclick = startTone;
+
+    const endButton = document.getElementById("endButton");
+    endButton.onclick = endTone;
+}
+
+Index();

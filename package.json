@@ -2,7 +2,7 @@
   "name": "browser_daw",
   "version": "1.0.0",
   "description": "This is a project where I'm attempting to create a rudimentarly Digital Audio Workstation (DAW) for use in a web browser.",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
