@@ -2,8 +2,26 @@
   <head></head>
   <body>
     <div>
-      <button id="startButton">Begin Tone</button>
-      <button id="endButton">End Tone</button>
+      <div id="container">
+        <div
+          id="keyboard"
+          style="width: 1200;height: 110;overflow-y: scroll;white-space: nowrap;"
+        ></div>
+      </div>
+      <br/>
+      <div id="settingsBar">
+        <div class="left">
+        </div>
+        <div class="right">
+          <span>Waveform: </span>
+          <select id="waveformPicker" name="waveform">
+            <option value="sine">Sine</option>
+            <option value="square">Square</option>
+            <option value="sawtooth">Sawtooth</option>
+            <option value="triangle">Triangle</option>
+          </select>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="index.js"></script>
   </body>
